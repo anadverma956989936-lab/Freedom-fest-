@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#05080d">
+
+<title>🇮🇳 Freedom Fest 2047</title>
+
+<style>
+*{
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+}
+
+html{
+ scroll-behavior:smooth;
+}
+
+body{
+ min-height:100vh;
+ background:#02050a;
+ color:#fff;
+ font-family:
+ Arial,
+ Helvetica,
+ sans-serif;
+ overflow-x:hidden;
+}
+
+button,input,textarea{
+ font:inherit;
+}
+
+button{
+ cursor:pointer;
+}
+
+:root{
+ --orange:#ff9933;
+ --green:#138808;
+ --white:#ffffff;
+ --blue:#4edcff;
+ --red:#ff5265;
+ --glass:rgba(255,255,255,.055);
+ --border:rgba(255,255,255,.13);
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+#app{
+ min-height:100vh;
+ position:relative;
+ overflow:hidden;
+
+ background:
+ radial-gradient(
+  circle at 50% -10%,
+  rgba(255,153,51,.18),
+  transparent 28%
+ ),
+ radial-gradient(
+  circle at 0% 45%,
+  rgba(19,136,8,.10),
+  transparent 28%
+ ),
+ radial-gradient(
+  circle at 100% 55%,
+  rgba(78,220,255,.08),
+  transparent 25%
+ ),
+ linear-gradient(
+  180deg,
+  #02050a,
+  #050a12 55%,
+  #02050a
+ );
+}
+
+#app:before,
+#app:after{
+ content:"";
+ position:absolute;
+ width:250px;
+ height:250px;
+ border-radius:50%;
+ filter:blur(80px);
+ opacity:.12;
+ pointer-events:none;
+}
+
+#app:before{
+ background:var(--orange);
+ top:180px;
+ left:-130px;
+ animation:float1 8s infinite alternate ease-in-out;
+}
+
+#app:after{
+ background:var(--green);
+ right:-130px;
+ top:500px;
+ animation:float2 10s infinite alternate ease-in-out;
+}
+
+@keyframes float1{
+ to{
+  transform:translate(100px,80px);
+ }
+}
+
+@keyframes float2{
+ to{
+  transform:translate(-100px,-70px);
+ }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+ text-align:center;
+ padding:35px 15px 20px;
+ position:relative;
+ z-index:2;
+}
+
+.badge{
+ display:inline-flex;
+ align-items:center;
+ gap:7px;
+
+ padding:8px 15px;
+
+ border:1px solid rgba(255,255,255,.16);
+ border-radius:999px;
+
+ background:rgba(255,255,255,.04);
+ backdrop-filter:blur(12px);
+
+ color:#9ba9bb;
+
+ font-size:8px;
+ font-weight:bold;
+ letter-spacing:2.5px;
+
+ box-shadow:
+ 0 10px 40px rgba(0,0,0,.2);
+}
+
+h1{
+ margin:18px 0 7px;
+
+ font-size:
+ clamp(42px,12vw,78px);
+
+ line-height:.9;
+
+ font-weight:1000;
+ letter-spacing:-3px;
+
+ background:
+ linear-gradient(
+  180deg,
+  #ffb15c 0%,
+  #ff9933 27%,
+  #ffffff 42%,
+  #ffffff 60%,
+  #62c85b 74%,
+  #138808 100%
+ );
+
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+
+ filter:
+ drop-shadow(0 0 25px rgba(255,153,51,.18));
+}
+
+.subtitle{
+ color:#7f8da1;
+ font-size:9px;
+ letter-spacing:3px;
+ font-weight:bold;
+}
+
+.flag{
+ width:86%;
+ max-width:580px;
+ height:4px;
+ margin:20px auto 0;
+
+ display:flex;
+ gap:3px;
+
+ border-radius:20px;
+ overflow:hidden;
+
+ opacity:.9;
+}
+
+.flag i{
+ flex:1;
+}
+
+.flag i:nth-child(1){
+ background:var(--orange);
+ box-shadow:0 0 18px rgba(255,153,51,.5);
+}
+
+.flag i:nth-child(2){
+ background:#fff;
+ box-shadow:0 0 18px rgba(255,255,255,.3);
+}
+
+.flag i:nth-child(3){
+ background:var(--green);
+ box-shadow:0 0 18px rgba(19,136,8,.5);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+ width:min(94%,700px);
+ margin:auto;
+ position:relative;
+ z-index:2;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+ position:relative;
+ overflow:hidden;
+
+ padding:28px 18px;
+
+ border:1px solid var(--border);
+ border-radius:28px;
+
+ background:
+ linear-gradient(
+  145deg,
+  rgba(255,255,255,.08),
+  rgba(255,255,255,.025)
+ );
+
+ backdrop-filter:blur(20px);
+
+ box-shadow:
+ 0 25px 80px rgba(0,0,0,.28),
+  inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+.hero:before{
+ content:"";
+ position:absolute;
+
+ width:220px;
+ height:220px;
+
+ top:-130px;
+ left:50%;
+ transform:translateX(-50%);
+
+ border-radius:50%;
+
+ background:
+ radial-gradient(
+  circle,
+  rgba(255,153,51,.25),
+  transparent 65%
+ );
+
+ pointer-events:none;
+}
+
+.heroFlag{
+ font-size:52px;
+ filter:
+ drop-shadow(0 0 25px rgba(255,153,51,.25));
+
+ animation:flagFloat 3s infinite ease-in-out;
+}
+
+@keyframes flagFloat{
+ 50%{
+  transform:translateY(-5px);
+ }
+}
+
+.hero h2{
+ margin-top:8px;
+
+ font-size:27px;
+ letter-spacing:2px;
+ font-weight:1000;
+}
+
+.heroText{
+ max-width:500px;
+ margin:10px auto 0;
+
+ color:#8b9aad;
+
+ font-size:10px;
+ line-height:1.8;
+}
+
+.live{
+ display:inline-flex;
+ align-items:center;
+ gap:7px;
+
+ margin-top:15px;
+
+ padding:7px 12px;
+
+ border:1px solid rgba(19,136,8,.35);
+ border-radius:999px;
+
+ background:rgba(19,136,8,.07);
+
+ color:#6ee56b;
+
+ font-size:8px;
+ font-weight:bold;
+ letter-spacing:1px;
+}
+
+.dot{
+ width:7px;
+ height:7px;
+
+ border-radius:50%;
+
+ background:#49e65b;
+
+ box-shadow:
+ 0 0 0 4px rgba(73,230,91,.08),
+ 0 0 14px #49e65b;
+
+ animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+ 50%{
+  opacity:.35;
+ }
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:8px;
+
+ margin-top:20px;
+}
+
+.count{
+ position:relative;
+
+ padding:13px 4px;
+
+ border:1px solid rgba(255,255,255,.10);
+ border-radius:15px;
+
+ background:rgba(0,0,0,.22);
+
+ box-shadow:
+ inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.count b{
+ display:block;
+
+ font-size:24px;
+ font-weight:1000;
+
+ background:
+ linear-gradient(
+  180deg,
+  #fff,
+  #9aa8b9
+ );
+
+ -webkit-background-clip:text;
+ color:transparent;
+}
+
+.count small{
+ display:block;
+
+ margin-top:3px;
+
+ color:#647388;
+
+ font-size:7px;
+ font-weight:bold;
+ letter-spacing:1px;
+}
+
+.nextDay{
+ margin-top:12px;
+
+ color:#59697e;
+
+ font-size:7px;
+ letter-spacing:2px;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.tabs{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:7px;
+
+ margin:15px 0;
+}
+
+.tab{
+ position:relative;
+
+ padding:13px 5px;
+
+ border:1px solid var(--border);
+ border-radius:14px;
+
+ background:rgba(255,255,255,.035);
+
+ color:#8493a7;
+
+ font-size:8px;
+ font-weight:900;
+
+ transition:.25s;
+}
+
+.tab:hover{
+ transform:translateY(-2px);
+}
+
+.tab.active{
+ color:#111;
+
+ border-color:transparent;
+
+ background:
+ linear-gradient(
+  135deg,
+  #ff9933,
+  #fff 50%,
+  #138808
+ );
+
+ box-shadow:
+ 0 8px 25px rgba(255,153,51,.12);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+ margin-bottom:13px;
+ padding:17px;
+
+ border:1px solid var(--border);
+ border-radius:21px;
+
+ background:
+ linear-gradient(
+  145deg,
+  rgba(255,255,255,.065),
+  rgba(255,255,255,.025)
+ );
+
+ backdrop-filter:blur(14px);
+
+ box-shadow:
+ 0 15px 50px rgba(0,0,0,.16),
+  inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.cardTitle{
+ margin-bottom:13px;
+
+ font-size:14px;
+ font-weight:1000;
+}
+
+.cardSub{
+ color:#68788d;
+ font-size:8px;
+ line-height:1.6;
+ margin-top:-7px;
+ margin-bottom:12px;
+}
+
+/* =========================
+   COMPOSER
+========================= */
+
+textarea{
+ width:100%;
+ min-height:120px;
+
+ resize:none;
+
+ padding:14px;
+
+ border:1px solid rgba(255,255,255,.11);
+ border-radius:15px;
+
+ outline:none;
+
+ background:
+ rgba(0,0,0,.25);
+
+ color:#fff;
+
+ font-size:11px;
+ line-height:1.6;
+
+ transition:.25s;
+}
+
+textarea:focus{
+ border-color:rgba(255,153,51,.65);
+
+ box-shadow:
+ 0 0 0 3px rgba(255,153,51,.06);
+}
+
+.counter{
+ margin-top:5px;
+
+ text-align:right;
+
+ color:#56667b;
+ font-size:7px;
+}
+
+.preview{
+ display:none;
+ position:relative;
+
+ margin-top:10px;
+}
+
+.preview img{
+ display:block;
+
+ width:100%;
+ max-height:330px;
+
+ object-fit:cover;
+
+ border-radius:15px;
+
+ border:1px solid rgba(255,255,255,.1);
+}
+
+.removePhoto{
+ position:absolute;
+
+ top:9px;
+ right:9px;
+
+ width:30px;
+ height:30px;
+
+ border:0;
+ border-radius:50%;
+
+ background:rgba(0,0,0,.7);
+
+ color:#fff;
+
+ font-size:18px;
+}
+
+.actions{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:7px;
+
+ margin-top:10px;
+}
+
+.action{
+ padding:12px 5px;
+
+ border:1px solid rgba(255,255,255,.10);
+ border-radius:12px;
+
+ background:rgba(255,255,255,.035);
+
+ color:#dbe3ec;
+
+ font-size:8px;
+ font-weight:900;
+
+ transition:.2s;
+}
+
+.action:hover{
+ background:rgba(255,255,255,.08);
+ transform:translateY(-1px);
+}
+
+.action.recording{
+ background:#c73545;
+ border-color:#ff6877;
+
+ animation:record 1s infinite alternate;
+}
+
+@keyframes record{
+ to{
+  box-shadow:0 0 20px rgba(255,60,80,.25);
+ }
+}
+
+.postBtn{
+ width:100%;
+
+ margin-top:10px;
+ padding:14px;
+
+ border:0;
+ border-radius:13px;
+
+ background:
+ linear-gradient(
+  100deg,
+  #ff9933,
+  #fff,
+  #138808
+ );
+
+ color:#050505;
+
+ font-size:10px;
+ font-weight:1000;
+ letter-spacing:.5px;
+
+ box-shadow:
+ 0 10px 30px rgba(255,153,51,.10);
+
+ transition:.2s;
+}
+
+.postBtn:hover{
+ transform:translateY(-2px);
+ box-shadow:
+ 0 14px 35px rgba(255,153,51,.17);
+}
+
+.postBtn:active{
+ transform:scale(.98);
+}
+
+/* =========================
+   POST
+========================= */
+
+.post{
+ position:relative;
+
+ margin-bottom:11px;
+ padding:16px;
+
+ border:1px solid rgba(255,255,255,.10);
+ border-radius:19px;
+
+ background:
+ linear-gradient(
+  145deg,
+  rgba(255,255,255,.055),
+  rgba(255,255,255,.018)
+ );
+
+ animation:postIn .3s ease;
+}
+
+@keyframes postIn{
+ from{
+  opacity:0;
+  transform:translateY(10px);
+ }
+ to{
+  opacity:1;
+  transform:translateY(0);
+ }
+}
+
+.postTop{
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+
+.avatar{
+ width:42px;
+ height:42px;
+
+ flex:none;
+
+ display:flex;
+ align-items:center;
+ justify-content:center;
+
+ border-radius:50%;
+
+ background:
+ linear-gradient(
+  135deg,
+  #ff9933,
+  #fff,
+  #138808
+ );
+
+ color:#111;
+
+ font-size:14px;
+ font-weight:1000;
+
+ box-shadow:
+ 0 0 0 3px rgba(255,255,255,.04);
+}
+
+.postName{
+ font-size:11px;
+ font-weight:1000;
+}
+
+.postTime{
+ display:block;
+
+ margin-top:3px;
+
+ color:#627187;
+ font-size:7px;
+}
+
+.postText{
+ margin:13px 0;
+
+ color:#d4dce5;
+
+ font-size:11px;
+ line-height:1.75;
+
+ white-space:pre-wrap;
+ word-break:break-word;
+}
+
+.postImg{
+ display:block;
+
+ width:100%;
+ max-height:380px;
+
+ object-fit:cover;
+
+ border-radius:15px;
+
+ border:1px solid rgba(255,255,255,.08);
+}
+
+.voice{
+ width:100%;
+ margin-top:9px;
+}
+
+.postActions{
+ display:flex;
+ gap:8px;
+
+ margin-top:12px;
+}
+
+.like,
+.report{
+ padding:10px;
+
+ border:1px solid rgba(255,255,255,.09);
+ border-radius:11px;
+
+ background:rgba(255,255,255,.035);
+
+ color:#c9d2dc;
+
+ font-size:9px;
+ font-weight:bold;
+}
+
+.like{
+ flex:1;
+}
+
+.like.liked{
+ color:#ff6171;
+
+ border-color:rgba(255,81,101,.3);
+
+ background:rgba(255,81,101,.06);
+}
+
+.report{
+ color:#7e8da0;
+}
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.podium{
+ display:grid;
+ grid-template-columns:1fr 1.2fr 1fr;
+ align-items:end;
+ gap:7px;
+
+ margin-bottom:15px;
+}
+
+.podiumItem{
+ padding:14px 5px;
+
+ text-align:center;
+
+ border:1px solid rgba(255,255,255,.10);
+ border-radius:15px;
+
+ background:rgba(255,255,255,.035);
+}
+
+.podiumItem.first{
+ padding-top:22px;
+ background:
+ linear-gradient(
+  180deg,
+  rgba(255,153,51,.10),
+  rgba(255,255,255,.03)
+ );
+}
+
+.podiumEmoji{
+ font-size:25px;
+}
+
+.podiumName{
+ margin-top:5px;
+
+ font-size:8px;
+ font-weight:1000;
+
+ white-space:nowrap;
+ overflow:hidden;
+ text-overflow:ellipsis;
+}
+
+.podiumLikes{
+ margin-top:4px;
+
+ color:#ff6474;
+
+ font-size:8px;
+ font-weight:bold;
+}
+
+.leader{
+ display:flex;
+ align-items:center;
+ gap:10px;
+
+ padding:12px;
+
+ margin-bottom:7px;
+
+ border:1px solid rgba(255,255,255,.08);
+ border-radius:14px;
+
+ background:rgba(255,255,255,.025);
+}
+
+.rankNo{
+ width:34px;
+ height:34px;
+
+ flex:none;
+
+ display:flex;
+ align-items:center;
+ justify-content:center;
+
+ border-radius:10px;
+
+ background:rgba(255,255,255,.07);
+
+ font-weight:1000;
+ font-size:11px;
+}
+
+.leaderInfo{
+ flex:1;
+ min-width:0;
+}
+
+.leaderInfo b{
+ display:block;
+
+ font-size:10px;
+
+ overflow:hidden;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+}
+
+.leaderInfo small{
+ display:block;
+
+ margin-top:4px;
+
+ color:#68788d;
+
+ font-size:7px;
+
+ overflow:hidden;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+}
+
+.likes{
+ color:#ff596c;
+
+ font-size:9px;
+ font-weight:1000;
+}
+
+/* =========================
+   REWARD
+========================= */
+
+.reward{
+ position:relative;
+ overflow:hidden;
+
+ text-align:center;
+
+ border-color:rgba(255,153,51,.25);
+
+ background:
+ radial-gradient(
+  circle at 50% 0,
+  rgba(255,153,51,.13),
+  transparent 55%
+ ),
+ rgba(255,255,255,.035);
+}
+
+.trophy{
+ font-size:52px;
+
+ filter:
+ drop-shadow(0 0 25px rgba(255,193,72,.25));
+
+ animation:trophyFloat 2.5s infinite ease-in-out;
+}
+
+@keyframes trophyFloat{
+ 50%{
+  transform:translateY(-5px) rotate(2deg);
+ }
+}
+
+.reward h2{
+ margin:8px 0;
+
+ font-size:20px;
+}
+
+.reward p{
+ margin-top:12px;
+
+ color:#9aa7b8;
+
+ font-size:9px;
+ line-height:1.8;
+}
+
+.reward b{
+ color:#ffb76c;
+}
+
+.rewardBox{
+ margin-top:15px;
+
+ padding:13px;
+
+ border:1px solid rgba(255,153,51,.15);
+ border-radius:13px;
+
+ background:rgba(255,153,51,.04);
+
+ font-size:9px;
+ line-height:1.7;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+ position:fixed;
+ inset:0;
+
+ z-index:1000;
+
+ display:none;
+ align-items:center;
+ justify-content:center;
+
+ padding:15px;
+
+ background:rgba(0,0,0,.78);
+
+ backdrop-filter:blur(10px);
+}
+
+.modal.show{
+ display:flex;
+}
+
+.modalBox{
+ width:min(94%,420px);
+
+ padding:23px;
+
+ border:1px solid rgba(255,255,255,.16);
+ border-radius:22px;
+
+ background:
+ linear-gradient(
+  145deg,
+  #101923,
+  #071018
+ );
+
+ box-shadow:
+ 0 30px 100px rgba(0,0,0,.55);
+}
+
+.modalBox h2{
+ margin-bottom:7px;
+}
+
+.modalBox p{
+ margin-bottom:12px;
+}
+
+input{
+ width:100%;
+
+ padding:13px;
+
+ margin:6px 0;
+
+ background:#03070c;
+
+ border:1px solid rgba(255,255,255,.12);
+ border-radius:11px;
+
+ color:#fff;
+
+ outline:none;
+}
+
+input:focus{
+ border-color:var(--orange);
+}
+
+.modalBtn{
+ width:100%;
+
+ padding:13px;
+
+ border:0;
+ border-radius:11px;
+
+ margin-top:7px;
+
+ background:var(--orange);
+
+ color:#111;
+
+ font-size:10px;
+ font-weight:1000;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+ text-align:center;
+
+ padding:28px 15px;
+
+ color:#718197;
+
+ font-size:9px;
+
+ line-height:1.7;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+ position:fixed;
+
+ left:50%;
+ bottom:22px;
+
+ z-index:3000;
+
+ transform:
+ translate(-50%,100px);
+
+ padding:12px 18px;
+
+ border:1px solid rgba(255,255,255,.13);
+ border-radius:999px;
+
+ background:
+ rgba(10,17,25,.92);
+
+ backdrop-filter:blur(15px);
+
+ color:#fff;
+
+ font-size:9px;
+
+ opacity:0;
+
+ transition:.25s;
+
+ pointer-events:none;
+}
+
+.toast.show{
+ opacity:1;
+
+ transform:
+ translate(-50%,0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+ text-align:center;
+
+ padding:25px 10px 38px;
+
+ color:#536276;
+
+ font-size:7px;
+ letter-spacing:1.5px;
+}
+
+.footerFlag{
+ margin:10px auto;
+
+ width:80px;
+ height:3px;
+
+ display:flex;
+ gap:2px;
+
+ border-radius:20px;
+ overflow:hidden;
+}
+
+.footerFlag i{
+ flex:1;
+}
+
+.footerFlag i:nth-child(1){
+ background:var(--orange);
+}
+
+.footerFlag i:nth-child(2){
+ background:#fff;
+}
+
+.footerFlag i:nth-child(3){
+ background:var(--green);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:430px){
+
+ header{
+  padding-top:27px;
+ }
+
+ h1{
+  letter-spacing:-2px;
+ }
+
+ .hero{
+  padding:24px 13px;
+ }
+
+ .count b{
+  font-size:20px;
+ }
+
+ .tabs{
+  gap:5px;
+ }
+
+ .tab{
+  font-size:7px;
+ }
+
+ .card{
+  padding:14px;
+ }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<div id="app">
+
+<header>
+
+ <div class="badge">
+  🇮🇳 INDEPENDENCE DAY • COMMUNITY EVENT
+ </div>
+
+ <h1>FREEDOM FEST</h1>
+
+ <div class="subtitle">
+  YOUR VOICE • YOUR STORY • YOUR INDIA
+ </div>
+
+ <div class="flag">
+  <i></i>
+  <i></i>
+  <i></i>
+ </div>
+
+</header>
+
+
+<div class="container">
+
+<section class="hero">
+
+ <div class="heroFlag">
+  🇮🇳
+ </div>
+
+ <h2>INDIA • 2047</h2>
+
+ <p class="heroText">
+  Share your creativity, thoughts, memories,
+  photos and dreams for India's future.
+  Let your voice become part of Freedom Fest.
+ </p>
+
+ <div class="live">
+  <span class="dot"></span>
+  LIVE FREEDOM FEST
+ </div>
+
+ <div class="countdown">
+
+  <div class="count">
+   <b id="days">00</b>
+   <small>DAYS</small>
+  </div>
+
+  <div class="count">
+   <b id="hours">00</b>
+   <small>HOURS</small>
+  </div>
+
+  <div class="count">
+   <b id="minutes">00</b>
+   <small>MINUTES</small>
+  </div>
+
+  <div class="count">
+   <b id="seconds">00</b>
+   <small>SECONDS</small>
+  </div>
+
+ </div>
+
+ <div
+  class="nextDay"
+  id="nextDay">
+  NEXT INDEPENDENCE DAY
+ </div>
+
+</section>
+
+
+<div class="tabs">
+
+ <button
+  class="tab active"
+  onclick="showTab('feed',this)">
+  🔥 FEED
+ </button>
+
+ <button
+  class="tab"
+  onclick="showTab('leaderboard',this)">
+  🏆 TOP CREATORS
+ </button>
+
+ <button
+  class="tab"
+  onclick="showTab('reward',this)">
+  🎁 REWARD
+ </button>
+
+</div>
+
+
+<!-- =========================
+     FEED
+========================= -->
+
+<div id="feed">
+
+ <div class="card">
+
+  <div class="cardTitle">
+   ✨ Share Your Independence Day Story
+  </div>
+
+  <div class="cardSub">
+   Text likho, photo add karo ya apni voice share karo.
+  </div>
+
+  <textarea
+   id="postText"
+   maxlength="1000"
+   placeholder="Write something for India... 🇮🇳"
+   oninput="updateCounter()"></textarea>
+
+  <div class="counter">
+   <span id="counter">0</span>/1000
+  </div>
+
+
+  <div
+   class="preview"
+   id="preview">
+
+   <img id="previewImg">
+
+   <button
+    class="removePhoto"
+    onclick="removePhoto()">
+    ×
+   </button>
+
+  </div>
+
+
+  <input
+   id="photoInput"
+   type="file"
+   accept="image/*"
+   hidden
+   onchange="previewPhoto(event)"
+  >
+
+
+  <div class="actions">
+
+   <button
+    class="action"
+    onclick="
+     document
+      .getElementById('photoInput')
+      .click()
+    ">
+    📸 PHOTO
+   </button>
+
+   <button
+    class="action"
+    id="voiceBtn"
+    onclick="toggleVoice()">
+    🎙️ VOICE
+   </button>
+
+   <button
+    class="action"
+    onclick="addEmoji()">
+    🇮🇳 EMOJI
+   </button>
+
+  </div>
+
+
+  <audio
+   id="voicePreview"
+   class="voice"
+   controls
+   style="display:none">
+  </audio>
+
+
+  <button
+   class="postBtn"
+   onclick="createPost()">
+   🚀 PUBLISH MY POST
+  </button>
+
+ </div>
+
+
+ <div id="posts"></div>
+
+</div>
+
+
+<!-- =========================
+     LEADERBOARD
+========================= -->
+
+<div
+ id="leaderboard"
+ class="hidden">
+
+ <div class="card">
+
+  <div class="cardTitle">
+   🏆 TOP FREEDOM CREATORS
+  </div>
+
+  <div class="cardSub">
+   Most liked creators appear here.
+  </div>
+
+  <div
+   id="podium"
+   class="podium">
+  </div>
+
+  <div id="leaders"></div>
+
+ </div>
+
+</div>
+
+
+<!-- =========================
+     REWARD
+========================= -->
+
+<div
+ id="reward"
+ class="hidden">
+
+ <div class="card reward">
+
+  <div class="trophy">
+   🏆
+  </div>
+
+  <h2>
+   FREEDOM CREATOR AWARD
+  </h2>
+
+  <p>
+   Event ke end par
+   <b>sabse zyada genuine likes</b>
+   wale eligible post ko special reward milega.
+  </p>
+
+  <div class="rewardBox">
+
+   🥇 <b>#1 — FREE CUSTOM HTML GAME CODE</b>
+
+   <br><br>
+
+   🥈 Custom Game Upgrade
+
+   <br><br>
+
+   🥉 Custom Profile / Post Design
+
+  </div>
+
+  <p>
+   ❤️ Genuine likes only.<br>
+   Spam ya fake activity reward ke liye eligible nahi hogi.
+  </p>
+
+ </div>
+
+</div>
+
+
+<footer>
+
+ <div class="footerFlag">
+  <i></i>
+  <i></i>
+  <i></i>
+ </div>
+
+ FREEDOM FEST • MADE FOR INDIA 🇮🇳
+
+</footer>
+
+</div>
+
+
+<!-- =========================
+     USER MODAL
+========================= -->
+
+<div
+ class="modal"
+ id="userModal">
+
+ <div class="modalBox">
+
+  <h2>
+   🇮🇳 Creator Profile
+  </h2>
+
+  <p
+   style="
+   font-size:9px;
+   color:#8290a3;
+   line-height:1.6">
+   Apna display name choose karo.
+  </p>
+
+  <input
+   id="nameInput"
+   maxlength="30"
+   placeholder="Your name"
+   autocomplete="off"
+  >
+
+  <button
+   class="modalBtn"
+   onclick="saveUser()">
+   CONTINUE
+  </button>
+
+ </div>
+
+</div>
+
+
+<div
+ id="toast"
+ class="toast">
+</div>
+
+
+<script>
+
+/* =========================
+   DATA
+========================= */
+
+let posts=[];
+
+try{
+
+ posts=
+  JSON.parse(
+   localStorage.getItem(
+    "freedomPosts"
+   ) || "[]"
+  );
+
+ if(!Array.isArray(posts))
+  posts=[];
+
+}catch(e){
+
+ posts=[];
+
+}
+
+
+let user=null;
+
+try{
+
+ user=
+  JSON.parse(
+   localStorage.getItem(
+    "freedomUser"
+   ) || "null"
+  );
+
+}catch(e){
+
+ user=null;
+
+}
+
+
+let selectedPhoto=null;
+let voiceBlob=null;
+let mediaRecorder=null;
+let voiceChunks=[];
+
+
+/* =========================
+   USER
+========================= */
+
+function ensureUser(){
+
+ if(!user){
+  document.getElementById("userModal")
+   .classList.add("show");
+ }
+
+}
+
+function saveUser(){
+
+ const name =
+  document.getElementById("nameInput")
+  .value.trim();
+
+ if(!name){
+  showToast("⚠️ Apna name enter karo");
+  return;
+ }
+
+ user = {
+  id:"user_"+Date.now(),
+  name:name
+ };
+
+ localStorage.setItem(
+  "freedomUser",
+  JSON.stringify(user)
+ );
+
+ document.getElementById("userModal")
+  .classList.remove("show");
+
+ showToast("🇮🇳 Welcome to Freedom Fest!");
+
+ renderPosts();
+}
+
+
+/* =========================
+   TAB SYSTEM
+========================= */
+
+function showTab(tab,button){
+
+ ["feed","leaderboard","reward"]
+  .forEach(id=>{
+   document
+    .getElementById(id)
+    .classList.add("hidden");
+  });
+
+ document
+  .getElementById(tab)
+  .classList.remove("hidden");
+
+ document
+  .querySelectorAll(".tab")
+  .forEach(x=>x.classList.remove("active"));
+
+ button.classList.add("active");
+
+ if(tab==="leaderboard"){
+  renderLeaderboard();
+ }
+
+}
+
+
+/* =========================
+   TEXT COUNTER
+========================= */
+
+function updateCounter(){
+
+ const text =
+  document.getElementById("postText").value;
+
+ document.getElementById("counter")
+  .textContent=text.length;
+
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+function previewPhoto(event){
+
+ const file =
+  event.target.files[0];
+
+ if(!file)return;
+
+ if(!file.type.startsWith("image/")){
+  showToast("⚠️ Sirf image upload karo");
+  return;
+ }
+
+ if(file.size>5*1024*1024){
+  showToast("⚠️ Photo 5MB se chhoti rakho");
+  event.target.value="";
+  return;
+ }
+
+ selectedPhoto=file;
+
+ const reader=new FileReader();
+
+ reader.onload=function(e){
+
+  document.getElementById("previewImg")
+   .src=e.target.result;
+
+  document.getElementById("preview")
+   .style.display="block";
+
+ };
+
+ reader.readAsDataURL(file);
+
+ showToast("📸 Photo ready!");
+}
+
+
+function removePhoto(){
+
+ selectedPhoto=null;
+
+ document.getElementById("preview")
+  .style.display="none";
+
+ document.getElementById("previewImg")
+  .src="";
+
+ document.getElementById("photoInput")
+  .value="";
+}
+
+
+/* =========================
+   EMOJI
+========================= */
+
+function addEmoji(){
+
+ const box =
+  document.getElementById("postText");
+
+ box.value += " 🇮🇳✨";
+
+ updateCounter();
+ box.focus();
+
+}
+
+
+/* =========================
+   VOICE RECORDING
+========================= */
+
+async function toggleVoice(){
+
+ const btn =
+  document.getElementById("voiceBtn");
+
+ if(
+  mediaRecorder &&
+  mediaRecorder.state==="recording"
+ ){
+
+  mediaRecorder.stop();
+
+  btn.textContent="🎙️ VOICE";
+  btn.classList.remove("recording");
+
+  return;
+ }
+
+ if(
+  !navigator.mediaDevices ||
+  !navigator.mediaDevices.getUserMedia
+ ){
+
+  showToast(
+   "❌ Voice recording supported nahi hai"
+  );
+
+  return;
+ }
+
+ try{
+
+  const stream =
+   await navigator.mediaDevices
+   .getUserMedia({
+    audio:true
+   });
+
+  voiceChunks=[];
+
+  mediaRecorder =
+   new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable =
+   function(e){
+
+    if(e.data.size){
+     voiceChunks.push(e.data);
+    }
+
+   };
+
+  mediaRecorder.onstop=function(){
+
+   voiceBlob =
+    new Blob(
+     voiceChunks,
+     {type:"audio/webm"}
+    );
+
+   const url =
+    URL.createObjectURL(voiceBlob);
+
+   const player =
+    document.getElementById(
+     "voicePreview"
+    );
+
+   player.src=url;
+   player.style.display="block";
+
+   stream
+    .getTracks()
+    .forEach(track=>track.stop());
+
+   showToast("🎙️ Voice ready!");
+
+  };
+
+  mediaRecorder.start();
+
+  btn.textContent="⏹️ STOP RECORDING";
+  btn.classList.add("recording");
+
+  showToast("🔴 Recording started...");
+
+ }catch(error){
+
+  showToast(
+   "⚠️ Microphone permission allow karo"
+  );
+
+ }
+
+}
+
+
+/* =========================
+   CREATE POST
+========================= */
+
+function createPost(){
+
+ if(!user){
+
+  ensureUser();
+  return;
+
+ }
+
+ const text =
+  document
+  .getElementById("postText")
+  .value
+  .trim();
+
+ if(
+  !text &&
+  !selectedPhoto &&
+  !voiceBlob
+ ){
+
+  showToast(
+   "⚠️ Text, photo ya voice add karo"
+  );
+
+  return;
+ }
+
+
+ const post={
+  id:"post_"+Date.now(),
+
+  userId:user.id,
+
+  name:user.name,
+
+  text:text,
+
+  likes:0,
+
+  likedBy:[],
+
+  time:Date.now(),
+
+  photo:null,
+
+  voice:null
+ };
+
+
+ /*
+  PHOTO
+ */
+
+ if(selectedPhoto){
+
+  const reader =
+   new FileReader();
+
+  reader.onload=function(e){
+
+   post.photo=e.target.result;
+
+   saveVoiceAndFinish(post);
+
+  };
+
+  reader.readAsDataURL(selectedPhoto);
+
+ }else{
+
+  saveVoiceAndFinish(post);
+
+ }
+
+}
+
+
+/* =========================
+   SAVE VOICE + POST
+========================= */
+
+function saveVoiceAndFinish(post){
+
+ if(voiceBlob){
+
+  const reader =
+   new FileReader();
+
+  reader.onload=function(e){
+
+   post.voice=e.target.result;
+
+   finishPost(post);
+
+  };
+
+  reader.readAsDataURL(voiceBlob);
+
+ }else{
+
+  finishPost(post);
+
+ }
+
+}
+
+
+/* =========================
+   FINISH POST
+========================= */
+
+function finishPost(post){
+
+ posts.unshift(post);
+
+ try{
+
+  localStorage.setItem(
+   "freedomPosts",
+   JSON.stringify(posts)
+  );
+
+ }catch(error){
+
+  showToast(
+   "⚠️ Storage full. Chhoti photo/voice use karo."
+  );
+
+  return;
+ }
+
+
+ document
+  .getElementById("postText")
+  .value="";
+
+ updateCounter();
+
+ removePhoto();
+
+ voiceBlob=null;
+
+ const player =
+  document.getElementById(
+   "voicePreview"
+  );
+
+ player.src="";
+ player.style.display="none";
+
+
+ showToast(
+  "🚀 Your Freedom Post is LIVE!"
+ );
+
+ renderPosts();
+
+}
+
+
+/* =========================
+   RENDER POSTS
+========================= */
+
+function renderPosts(){
+
+ const box =
+  document.getElementById("posts");
+
+ box.innerHTML="";
+
+
+ if(!posts.length){
+
+  box.innerHTML=`
+
+   <div class="card empty">
+
+    🇮🇳 No posts yet.
+
+    <br><br>
+
+    Be the first
+    <b>Freedom Creator!</b>
+
+   </div>
+
+  `;
+
+  return;
+ }
+
+
+ posts.forEach(post=>{
+
+  const liked =
+   user &&
+   Array.isArray(post.likedBy) &&
+   post.likedBy.includes(user.id);
+
+  const div =
+   document.createElement("div");
+
+  div.className="post";
+
+
+  div.innerHTML=`
+
+   <div class="postTop">
+
+    <div class="avatar">
+
+     ${escapeHTML(
+      (post.name || "?")
+      .charAt(0)
+      .toUpperCase()
+     )}
+
+    </div>
+
+    <div>
+
+     <div class="postName">
+      ${escapeHTML(post.name)}
+     </div>
+
+     <span class="postTime">
+      ${timeAgo(post.time)}
+     </span>
+
+    </div>
+
+   </div>
+
+
+   ${
+    post.text
+    ?
+    `
+    <div class="postText">
+     ${escapeHTML(post.text)}
+    </div>
+    `
+    :
+    ""
+   }
+
+
+   ${
+    post.photo
+    ?
+    `
+    <img
+     class="postImg"
+     src="${post.photo}"
+     loading="lazy">
+    `
+    :
+    ""
+   }
+
+
+   ${
+    post.voice
+    ?
+    `
+    <audio
+     class="voice"
+     controls
+     src="${post.voice}">
+    </audio>
+    `
+    :
+    ""
+   }
+
+
+   <div class="postActions">
+
+    <button
+     class="like ${liked?"liked":""}"
+     onclick="likePost('${post.id}')">
+
+     ${liked ? "❤️" : "♡"}
+     ${post.likes || 0}
+
+    </button>
+
+
+    <button
+     class="report"
+     onclick="reportPost('${post.id}')">
+
+     ⚑ Report
+
+    </button>
+
+   </div>
+
+  `;
+
+  box.appendChild(div);
+
+ });
+
+}
+
+
+/* =========================
+   LIKE
+========================= */
+
+function likePost(id){
+
+ if(!user){
+
+  ensureUser();
+  return;
+
+ }
+
+ const post =
+  posts.find(
+   p=>p.id===id
+  );
+
+ if(!post)return;
+
+ if(!Array.isArray(post.likedBy)){
+  post.likedBy=[];
+ }
+
+ const index =
+  post.likedBy.indexOf(
+   user.id
+  );
+
+
+ if(index===-1){
+
+  post.likedBy.push(user.id);
+
+  post.likes =
+   (post.likes || 0)+1;
+
+  showToast("❤️ Like added!");
+
+ }else{
+
+  post.likedBy.splice(
+   index,
+   1
+  );
+
+  post.likes =
+   Math.max(
+    0,
+    (post.likes || 0)-1
+   );
+
+ }
+
+ localStorage.setItem(
+  "freedomPosts",
+  JSON.stringify(posts)
+ );
+
+ renderPosts();
+
+}
+
+
+/* =========================
+   REPORT
+========================= */
+
+function reportPost(id){
+
+ const reason =
+  prompt(
+   "Report reason:\n\n"+
+   "1. Spam\n"+
+   "2. Inappropriate\n"+
+   "3. Other"
+  );
+
+ if(reason){
+
+  showToast(
+   "⚑ Report submitted"
+  );
+
+ }
+
+}
+
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+function renderLeaderboard(){
+
+ const sorted =
+  [...posts]
+  .sort(
+   (a,b)=>
+    (b.likes||0)-
+    (a.likes||0)
+  );
+
+ const podium =
+  document.getElementById(
+   "podium"
+  );
+
+ const leaders =
+  document.getElementById(
+   "leaders"
+  );
+
+ podium.innerHTML="";
+ leaders.innerHTML="";
+
+
+ if(!sorted.length){
+
+  podium.innerHTML=`
+
+   <div class="card empty"
+    style="grid-column:1/4">
+
+    🏆 Leaderboard empty
+
+    <br>
+
+    Be the first creator!
+
+   </div>
+
+  `;
+
+  return;
+ }
+
+
+ const medals=[
+  "🥈",
+  "🥇",
+  "🥉"
+ ];
+
+
+ /*
+  PODIUM
+ */
+
+ [1,0,2].forEach(index=>{
+
+  if(!sorted[index])return;
+
+  const post =
+   sorted[index];
+
+  const item =
+   document.createElement("div");
+
+  item.className =
+   "podiumItem"+
+   (index===0 ? " first":"");
+
+  item.innerHTML=`
+
+   <div class="podiumEmoji">
+    ${medals[index] || "🏆"}
+   </div>
+
+   <div class="podiumName">
+    ${escapeHTML(post.name)}
+   </div>
+
+   <div class="podiumLikes">
+    ❤️ ${post.likes||0}
+   </div>
+
+  `;
+
+  podium.appendChild(item);
+
+ });
+
+
+ /*
+  FULL LIST
+ */
+
+ sorted
+  .slice(0,10)
+  .forEach((post,index)=>{
+
+   const row =
+    document.createElement("div");
+
+   row.className="leader";
+
+   row.innerHTML=`
+
+    <div class="rankNo">
+     #${index+1}
+    </div>
+
+    <div class="leaderInfo">
+
+     <b>
+      ${escapeHTML(post.name)}
+     </b>
+
+     <small>
+      ${escapeHTML(
+       (post.text ||
+       "Freedom Creator")
+       .slice(0,50)
+      )}
+     </small>
+
+    </div>
+
+    <div class="likes">
+     ❤️ ${post.likes||0}
+    </div>
+
+   `;
+
+   leaders.appendChild(row);
+
+  });
+
+}
+
+
+/* =========================
+   COUNTDOWN
+   NEXT INDEPENDENCE DAY
+========================= */
+
+function countdown(){
+
+ function getTarget(){
+
+  const now =
+   new Date();
+
+  let year =
+   now.getFullYear();
+
+  let target =
+   new Date(
+    year,
+    7,
+    15,
+    0,
+    0,
+    0
+   );
+
+  /*
+   Agar 15 August
+   already pass ho chuka hai,
+   next year target hoga.
+  */
+
+  if(now >= target){
+
+   target =
+    new Date(
+     year+1,
+     7,
+     15,
+     0,
+     0,
+     0
+    );
+
+  }
+
+  return target;
+
+ }
+
+
+ function update(){
+
+  const target =
+   getTarget();
+
+  let diff =
+   target.getTime()-
+   Date.now();
+
+  if(diff<0)diff=0;
+
+
+  const days =
+   Math.floor(
+    diff/86400000
+   );
+
+  const hours =
+   Math.floor(
+    diff/3600000
+   ) % 24;
+
+  const minutes =
+   Math.floor(
+    diff/60000
+   ) % 60;
+
+  const seconds =
+   Math.floor(
+    diff/1000
+   ) % 60;
+
+
+  document
+   .getElementById("days")
+   .textContent =
+    String(days)
+    .padStart(2,"0");
+
+
+  document
+   .getElementById("hours")
+   .textContent =
+    String(hours)
+    .padStart(2,"0");
+
+
+  document
+   .getElementById("minutes")
+   .textContent =
+    String(minutes)
+    .padStart(2,"0");
+
+
+  document
+   .getElementById("seconds")
+   .textContent =
+    String(seconds)
+    .padStart(2,"0");
+
+
+  document
+   .getElementById("nextDay")
+   .textContent =
+   "NEXT INDEPENDENCE DAY • "+
+   target.getFullYear();
+
+ }
+
+ update();
+
+ setInterval(
+  update,
+  1000
+ );
+
+}
+
+
+/* =========================
+   CLICK SPRINKLE EFFECT
+========================= */
+
+document.addEventListener(
+ "click",
+ function(e){
+
+  /*
+   Input/buttons ke normal
+   click ko disturb nahi karega.
+  */
+
+  const colors=[
+   "#ff9933",
+   "#ffffff",
+   "#138808",
+   "#4edcff"
+  ];
+
+  for(
+   let i=0;
+   i<9;
+   i++
+  ){
+
+   const spark =
+    document.createElement(
+     "span"
+    );
+
+   spark.style.position="fixed";
+   spark.style.left=e.clientX+"px";
+   spark.style.top=e.clientY+"px";
+
+   spark.style.width=
+    (Math.random()*5+3)+"px";
+
+   spark.style.height=
+    spark.style.width;
+
+   spark.style.borderRadius="50%";
+
+   spark.style.background=
+    colors[
+     Math.floor(
+      Math.random()*
+      colors.length
+     )
+    ];
+
+   spark.style.pointerEvents=
+    "none";
+
+   spark.style.zIndex="9999";
+
+   spark.style.boxShadow=
+    "0 0 10px currentColor";
+
+   document.body
+    .appendChild(spark);
+
+
+   const angle =
+    Math.random()*
+    Math.PI*2;
+
+   const distance =
+    Math.random()*55+20;
+
+   const x =
+    Math.cos(angle)*
+    distance;
+
+   const y =
+    Math.sin(angle)*
+    distance;
+
+
+   spark.animate(
+    [
+     {
+      transform:
+       "translate(0,0) scale(1)",
+      opacity:1
+     },
+     {
+      transform:
+       `translate(${x}px,${y}px) scale(0)`,
+      opacity:0
+     }
+    ],
+    {
+     duration:
+      550+
+      Math.random()*300,
+
+     easing:
+      "cubic-bezier(.2,.8,.3,1)"
+    }
+   ).onfinish=function(){
+
+    spark.remove();
+
+   };
+
+  }
+
+ }
+);
+
+
+/* =========================
+   TOAST
+========================= */
+
+let toastTimer;
+
+function showToast(message){
+
+ const toast =
+  document.getElementById(
+   "toast"
+  );
+
+ toast.textContent=message;
+
+ toast.classList.add("show");
+
+ clearTimeout(toastTimer);
+
+ toastTimer =
+  setTimeout(
+   ()=>{
+    toast.classList.remove("show");
+   },
+   2200
+  );
+
+}
+
+
+/* =========================
+   HELPERS
+========================= */
+
+function escapeHTML(text){
+
+ return String(text)
+  .replace(
+   /&/g,
+   "&amp;"
+  )
+  .replace(
+   /</g,
+   "&lt;"
+  )
+  .replace(
+   />/g,
+   "&gt;"
+  )
+  .replace(
+   /"/g,
+   "&quot;"
+  )
+  .replace(
+   /'/g,
+   "&#039;"
+  );
+
+}
+
+
+function timeAgo(time){
+
+ const seconds =
+  Math.floor(
+   (Date.now()-time)/1000
+  );
+
+
+ if(seconds<10)
+  return "Just now";
+
+ if(seconds<60)
+  return seconds+" sec ago";
+
+ if(seconds<3600)
+  return Math.floor(
+   seconds/60
+  )+" min ago";
+
+ if(seconds<86400)
+  return Math.floor(
+   seconds/3600
+  )+" hr ago";
+
+ return Math.floor(
+  seconds/86400
+ )+" day ago";
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+ensureUser();
+
+countdown();
+
+updateCounter();
+
+renderPosts();
+
+</script>
+
+</body>
+</html>
